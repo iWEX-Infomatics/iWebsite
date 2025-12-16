@@ -1,9 +1,0 @@
-{
-	"css/iwex_website.css": [
-		"public/css/styles.css"
-	],
-	"js/iwex_website.js": [
-		"public/js/main.js"
-	]
-}
-
