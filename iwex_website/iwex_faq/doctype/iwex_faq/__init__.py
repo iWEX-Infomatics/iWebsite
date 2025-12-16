@@ -1,0 +1,2 @@
+# iWEX FAQ DocType
+

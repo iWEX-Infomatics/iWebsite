@@ -1,0 +1,151 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:service_name",
+ "creation": "2025-12-16 19:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "service_name",
+  "icon",
+  "icon_class",
+  "short_description",
+  "column_break_1",
+  "display_order",
+  "is_published",
+  "section_break_2",
+  "full_description",
+  "section_break_features",
+  "features",
+  "section_break_image",
+  "service_image",
+  "column_break_image",
+  "service_image_alt"
+ ],
+ "fields": [
+  {
+   "fieldname": "service_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Service Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "icon",
+   "fieldtype": "Attach Image",
+   "label": "Icon Image"
+  },
+  {
+   "fieldname": "icon_class",
+   "fieldtype": "Data",
+   "label": "Icon Class (e.g., lucide-icon-name)"
+  },
+  {
+   "fieldname": "short_description",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Short Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "display_order",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Display Order"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Published"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Full Description"
+  },
+  {
+   "fieldname": "full_description",
+   "fieldtype": "Text Editor",
+   "label": "Full Description"
+  },
+  {
+   "fieldname": "section_break_features",
+   "fieldtype": "Section Break",
+   "label": "Features"
+  },
+  {
+   "fieldname": "features",
+   "fieldtype": "Table",
+   "label": "Features",
+   "options": "iWEX Service Feature"
+  },
+  {
+   "fieldname": "section_break_image",
+   "fieldtype": "Section Break",
+   "label": "Service Image"
+  },
+  {
+   "fieldname": "service_image",
+   "fieldtype": "Attach Image",
+   "label": "Service Image"
+  },
+  {
+   "fieldname": "column_break_image",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "service_image_alt",
+   "fieldtype": "Data",
+   "label": "Image Alt Text"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-12-16 19:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "iWEX Website",
+ "name": "iWEX Service",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Website Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "display_order",
+ "sort_order": "ASC",
+ "states": [],
+ "title_field": "service_name",
+ "track_changes": 1
+}
+

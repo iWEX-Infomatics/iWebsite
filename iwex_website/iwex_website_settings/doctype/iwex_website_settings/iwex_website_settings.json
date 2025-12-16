@@ -1,0 +1,268 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-12-16 19:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "hero_section",
+  "hero_title",
+  "hero_subtitle",
+  "hero_cta_text",
+  "hero_cta_link",
+  "hero_secondary_cta_text",
+  "hero_secondary_cta_link",
+  "hero_image",
+  "column_break_hero",
+  "hero_video_url",
+  "section_break_about",
+  "about_title",
+  "about_description",
+  "about_image",
+  "column_break_about",
+  "about_mission",
+  "about_vision",
+  "section_break_contact",
+  "contact_email",
+  "contact_phone",
+  "contact_address",
+  "column_break_contact",
+  "contact_map_url",
+  "section_break_social",
+  "facebook_url",
+  "twitter_url",
+  "linkedin_url",
+  "instagram_url",
+  "column_break_social",
+  "youtube_url",
+  "github_url",
+  "section_break_seo",
+  "meta_title",
+  "meta_description",
+  "meta_keywords",
+  "column_break_seo",
+  "og_image",
+  "google_analytics_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "hero_section",
+   "fieldtype": "Section Break",
+   "label": "Hero Section"
+  },
+  {
+   "fieldname": "hero_title",
+   "fieldtype": "Data",
+   "label": "Hero Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "hero_subtitle",
+   "fieldtype": "Small Text",
+   "label": "Hero Subtitle"
+  },
+  {
+   "fieldname": "hero_cta_text",
+   "fieldtype": "Data",
+   "label": "Primary CTA Text"
+  },
+  {
+   "fieldname": "hero_cta_link",
+   "fieldtype": "Data",
+   "label": "Primary CTA Link"
+  },
+  {
+   "fieldname": "hero_secondary_cta_text",
+   "fieldtype": "Data",
+   "label": "Secondary CTA Text"
+  },
+  {
+   "fieldname": "hero_secondary_cta_link",
+   "fieldtype": "Data",
+   "label": "Secondary CTA Link"
+  },
+  {
+   "fieldname": "hero_image",
+   "fieldtype": "Attach Image",
+   "label": "Hero Image"
+  },
+  {
+   "fieldname": "column_break_hero",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hero_video_url",
+   "fieldtype": "Data",
+   "label": "Hero Video URL"
+  },
+  {
+   "fieldname": "section_break_about",
+   "fieldtype": "Section Break",
+   "label": "About Section"
+  },
+  {
+   "fieldname": "about_title",
+   "fieldtype": "Data",
+   "label": "About Title"
+  },
+  {
+   "fieldname": "about_description",
+   "fieldtype": "Text Editor",
+   "label": "About Description"
+  },
+  {
+   "fieldname": "about_image",
+   "fieldtype": "Attach Image",
+   "label": "About Image"
+  },
+  {
+   "fieldname": "column_break_about",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "about_mission",
+   "fieldtype": "Text Editor",
+   "label": "Mission Statement"
+  },
+  {
+   "fieldname": "about_vision",
+   "fieldtype": "Text Editor",
+   "label": "Vision Statement"
+  },
+  {
+   "fieldname": "section_break_contact",
+   "fieldtype": "Section Break",
+   "label": "Contact Information"
+  },
+  {
+   "fieldname": "contact_email",
+   "fieldtype": "Data",
+   "label": "Contact Email"
+  },
+  {
+   "fieldname": "contact_phone",
+   "fieldtype": "Data",
+   "label": "Contact Phone"
+  },
+  {
+   "fieldname": "contact_address",
+   "fieldtype": "Small Text",
+   "label": "Contact Address"
+  },
+  {
+   "fieldname": "column_break_contact",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_map_url",
+   "fieldtype": "Data",
+   "label": "Google Maps Embed URL"
+  },
+  {
+   "fieldname": "section_break_social",
+   "fieldtype": "Section Break",
+   "label": "Social Media"
+  },
+  {
+   "fieldname": "facebook_url",
+   "fieldtype": "Data",
+   "label": "Facebook URL"
+  },
+  {
+   "fieldname": "twitter_url",
+   "fieldtype": "Data",
+   "label": "Twitter URL"
+  },
+  {
+   "fieldname": "linkedin_url",
+   "fieldtype": "Data",
+   "label": "LinkedIn URL"
+  },
+  {
+   "fieldname": "instagram_url",
+   "fieldtype": "Data",
+   "label": "Instagram URL"
+  },
+  {
+   "fieldname": "column_break_social",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "youtube_url",
+   "fieldtype": "Data",
+   "label": "YouTube URL"
+  },
+  {
+   "fieldname": "github_url",
+   "fieldtype": "Data",
+   "label": "GitHub URL"
+  },
+  {
+   "fieldname": "section_break_seo",
+   "fieldtype": "Section Break",
+   "label": "SEO Settings"
+  },
+  {
+   "fieldname": "meta_title",
+   "fieldtype": "Data",
+   "label": "Meta Title"
+  },
+  {
+   "fieldname": "meta_description",
+   "fieldtype": "Small Text",
+   "label": "Meta Description"
+  },
+  {
+   "fieldname": "meta_keywords",
+   "fieldtype": "Small Text",
+   "label": "Meta Keywords"
+  },
+  {
+   "fieldname": "column_break_seo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "og_image",
+   "fieldtype": "Attach Image",
+   "label": "Open Graph Image"
+  },
+  {
+   "fieldname": "google_analytics_id",
+   "fieldtype": "Data",
+   "label": "Google Analytics ID"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-12-16 19:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "iWEX Website",
+ "name": "iWEX Website Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Website Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
+

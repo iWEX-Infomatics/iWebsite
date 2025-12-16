@@ -1,0 +1,21 @@
+{
+  "name": "iwex_website",
+  "version": "0.0.1",
+  "description": "iWEX Infomatics Website for ERPNext",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "frappe",
+    "erpnext",
+    "website",
+    "pwa"
+  ],
+  "author": "iWEX Infomatics",
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^3.4.0"
+  }
+}
+
