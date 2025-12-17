@@ -1,2 +1,0 @@
-# iWEX Testimonial Module
-

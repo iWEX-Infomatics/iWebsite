@@ -1,2 +1,0 @@
-# iWEX Website Settings Module
-
