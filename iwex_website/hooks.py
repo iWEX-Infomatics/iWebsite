@@ -16,7 +16,11 @@ app_license = "MIT"
 
 # include js, css files in header of web template
 web_include_css = "/assets/iwex_website/css/styles.css"
-web_include_js = "/assets/iwex_website/js/main.js"
+web_include_js = [
+	"/assets/iwex_website/js/main.js",
+	"/assets/iwex_website/js/dark-mode.js",
+	"/assets/iwex_website/js/chatbot.js"
+]
 
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "iwex_website/public/scss/website"

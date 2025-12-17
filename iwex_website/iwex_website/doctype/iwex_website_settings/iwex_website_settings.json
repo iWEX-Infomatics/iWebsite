@@ -44,6 +44,33 @@
   "column_break_social",
   "youtube_url",
   "github_url",
+  "section_break_founder",
+  "founder_name",
+  "founder_title",
+  "founder_image",
+  "column_break_founder",
+  "founder_bio",
+  "founder_certifications",
+  "section_break_chatbot",
+  "enable_chatbot",
+  "whatsapp_business_number",
+  "whatsapp_api_number",
+  "column_break_chatbot",
+  "telegram_bot_username",
+  "telegram_bot_id",
+  "chatbot_greeting_message",
+  "section_break_clients",
+  "show_client_logos",
+  "client_logo_filter",
+  "column_break_clients",
+  "max_client_logos",
+  "section_break_stats",
+  "stat_clients_count",
+  "stat_years_experience",
+  "stat_industries_served",
+  "column_break_stats",
+  "stat_projects_completed",
+  "stat_team_size",
   "section_break_seo",
   "meta_title",
   "meta_description",
@@ -245,6 +272,155 @@
    "label": "GitHub URL"
   },
   {
+   "fieldname": "section_break_founder",
+   "fieldtype": "Section Break",
+   "label": "Founder Profile"
+  },
+  {
+   "fieldname": "founder_name",
+   "fieldtype": "Data",
+   "label": "Founder Name",
+   "default": "Ameer Babu"
+  },
+  {
+   "fieldname": "founder_title",
+   "fieldtype": "Data",
+   "label": "Founder Title",
+   "default": "Founder & Chief Consultant"
+  },
+  {
+   "fieldname": "founder_image",
+   "fieldtype": "Attach Image",
+   "label": "Founder Image",
+   "description": "Professional photo of the founder"
+  },
+  {
+   "fieldname": "column_break_founder",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "founder_bio",
+   "fieldtype": "Text Editor",
+   "label": "Founder Bio",
+   "description": "Short biography highlighting achievements"
+  },
+  {
+   "fieldname": "founder_certifications",
+   "fieldtype": "Small Text",
+   "label": "Certifications",
+   "description": "e.g., World's First Frappe Certified Consultant"
+  },
+  {
+   "fieldname": "section_break_chatbot",
+   "fieldtype": "Section Break",
+   "label": "Chatbot Configuration"
+  },
+  {
+   "fieldname": "enable_chatbot",
+   "fieldtype": "Check",
+   "label": "Enable Chatbot Widget",
+   "default": 1
+  },
+  {
+   "fieldname": "whatsapp_business_number",
+   "fieldtype": "Data",
+   "label": "WhatsApp Business Number",
+   "description": "Format: +919349125225"
+  },
+  {
+   "fieldname": "whatsapp_api_number",
+   "fieldtype": "Data",
+   "label": "WhatsApp API Number",
+   "description": "Meta Business API registered number: +919744763336"
+  },
+  {
+   "fieldname": "column_break_chatbot",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "telegram_bot_username",
+   "fieldtype": "Data",
+   "label": "Telegram Bot Username",
+   "description": "Format: @iWEXinfo_bot"
+  },
+  {
+   "fieldname": "telegram_bot_id",
+   "fieldtype": "Data",
+   "label": "Telegram Bot ID"
+  },
+  {
+   "fieldname": "chatbot_greeting_message",
+   "fieldtype": "Small Text",
+   "label": "Chatbot Greeting Message",
+   "default": "Hello! 👋 Welcome to iWEX Infomatics.\n\nI'm here to help you with ERPNext Manufacturing, HR & Payroll solutions."
+  },
+  {
+   "fieldname": "section_break_clients",
+   "fieldtype": "Section Break",
+   "label": "Client Logos (from Customer DocType)"
+  },
+  {
+   "fieldname": "show_client_logos",
+   "fieldtype": "Check",
+   "label": "Show Client Logos on Homepage",
+   "default": 1
+  },
+  {
+   "fieldname": "client_logo_filter",
+   "fieldtype": "Small Text",
+   "label": "Customer Filter",
+   "description": "e.g., {'disabled': 0} - Only show enabled customers with logo"
+  },
+  {
+   "fieldname": "column_break_clients",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "max_client_logos",
+   "fieldtype": "Int",
+   "label": "Maximum Logos to Display",
+   "default": 12
+  },
+  {
+   "fieldname": "section_break_stats",
+   "fieldtype": "Section Break",
+   "label": "Hero Statistics"
+  },
+  {
+   "fieldname": "stat_clients_count",
+   "fieldtype": "Int",
+   "label": "Happy Clients",
+   "default": 150
+  },
+  {
+   "fieldname": "stat_years_experience",
+   "fieldtype": "Int",
+   "label": "Years Experience",
+   "default": 9
+  },
+  {
+   "fieldname": "stat_industries_served",
+   "fieldtype": "Int",
+   "label": "Industries Served",
+   "default": 5
+  },
+  {
+   "fieldname": "column_break_stats",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "stat_projects_completed",
+   "fieldtype": "Int",
+   "label": "Projects Completed",
+   "default": 200
+  },
+  {
+   "fieldname": "stat_team_size",
+   "fieldtype": "Int",
+   "label": "Team Size",
+   "default": 15
+  },
+  {
    "fieldname": "section_break_seo",
    "fieldtype": "Section Break",
    "label": "SEO Settings"
@@ -282,7 +458,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-12-16 19:00:00.000000",
+ "modified": "2025-12-17 10:00:00.000000",
  "modified_by": "Administrator",
  "module": "iwex_website",
  "name": "iWEX Website Settings",

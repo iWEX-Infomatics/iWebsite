@@ -446,9 +446,67 @@ textarea:focus {
     outline-offset: 2px;
 }
 
-/* Dark Mode Support (Optional) */
-@media (prefers-color-scheme: dark) {
-    /* Add dark mode styles here if needed */
+/* Dark Mode Support */
+.dark {
+    --color-background: #0f172a;
+    --color-surface: #1e293b;
+    --color-surface-elevated: #334155;
+    --color-text-primary: #f1f5f9;
+    --color-text-secondary: #cbd5e1;
+    --color-border: #475569;
+}
+
+.dark body {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+}
+
+.dark #navbar {
+    background-color: rgba(15, 23, 42, 0.95);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.dark .card {
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+}
+
+.dark .service-card,
+.dark .testimonial-card,
+.dark .faq-item {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+}
+
+.dark .faq-question {
+    color: var(--color-text-primary);
+}
+
+.dark .faq-question:hover {
+    background-color: var(--color-surface-elevated);
+}
+
+.dark .faq-answer {
+    color: var(--color-text-secondary);
+}
+
+.dark .form-input,
+.dark .form-textarea {
+    background-color: var(--color-surface);
+    border-color: var(--color-border);
+    color: var(--color-text-primary);
+}
+
+.dark .form-input:focus,
+.dark .form-textarea:focus {
+    border-color: var(--primary-color);
+    background-color: var(--color-surface-elevated);
+}
+
+.dark footer {
+    background-color: #0a0f1a;
+    border-top: 1px solid var(--color-border);
 }
 
 /* Reduced Motion */

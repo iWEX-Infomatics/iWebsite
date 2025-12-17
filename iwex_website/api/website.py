@@ -24,6 +24,28 @@ def get_website_settings():
 						"logo_dark": settings.company_logo_dark or "",
 						"favicon": settings.favicon or ""
 					},
+					"founder": {
+						"name": settings.founder_name or "Ameer Babu",
+						"title": settings.founder_title or "Founder & Chief Consultant",
+						"image": settings.founder_image or "",
+						"bio": settings.founder_bio or "",
+						"certifications": settings.founder_certifications or ""
+					},
+					"chatbot": {
+						"enabled": settings.enable_chatbot or True,
+						"whatsapp_business": settings.whatsapp_business_number or "+919349125225",
+						"whatsapp_api": settings.whatsapp_api_number or "+919744763336",
+						"telegram_username": settings.telegram_bot_username or "@iWEXinfo_bot",
+						"telegram_id": settings.telegram_bot_id or "",
+						"greeting": settings.chatbot_greeting_message or "Hello! 👋 Welcome to iWEX Infomatics."
+					},
+					"stats": {
+						"clients": settings.stat_clients_count or 150,
+						"years": settings.stat_years_experience or 9,
+						"industries": settings.stat_industries_served or 5,
+						"projects": settings.stat_projects_completed or 200,
+						"team": settings.stat_team_size or 15
+					},
 					"hero": {
 						"title": settings.hero_title or "Welcome to iWEX Infomatics",
 						"subtitle": settings.hero_subtitle or "Innovative Web Solutions",
@@ -75,6 +97,28 @@ def get_website_settings():
 						"logo": "",
 						"logo_dark": "",
 						"favicon": ""
+					},
+					"founder": {
+						"name": "Ameer Babu",
+						"title": "Founder & Chief Consultant",
+						"image": "",
+						"bio": "",
+						"certifications": "World's First Frappe Certified Consultant (Manufacturing, HR & Payroll)"
+					},
+					"chatbot": {
+						"enabled": True,
+						"whatsapp_business": "+919349125225",
+						"whatsapp_api": "+919744763336",
+						"telegram_username": "@iWEXinfo_bot",
+						"telegram_id": "",
+						"greeting": "Hello! 👋 Welcome to iWEX Infomatics.\n\nI'm here to help you with ERPNext Manufacturing, HR & Payroll solutions."
+					},
+					"stats": {
+						"clients": 150,
+						"years": 9,
+						"industries": 5,
+						"projects": 200,
+						"team": 15
 					},
 					"hero": {
 						"title": "Welcome to iWEX Infomatics",
@@ -410,5 +454,60 @@ def get_categories():
 		return {
 			"success": False,
 			"message": _("Error fetching categories")
+		}
+
+@frappe.whitelist(allow_guest=True)
+def get_client_logos():
+	"""
+	Get client logos from Customer DocType
+	"""
+	try:
+		# Get settings
+		settings = None
+		if frappe.db.exists("iWEX Website Settings", "iWEX Website Settings"):
+			settings = frappe.get_doc("iWEX Website Settings", "iWEX Website Settings")
+		
+		# Check if client logos are enabled
+		if settings and not settings.show_client_logos:
+			return {
+				"success": True,
+				"data": []
+			}
+		
+		# Get max logos to display
+		max_logos = settings.max_client_logos if settings else 12
+		
+		# Build filter
+		filters = {"disabled": 0}
+		
+		# Get customers with images
+		customers = frappe.get_all(
+			"Customer",
+			filters=filters,
+			fields=["name", "customer_name", "image"],
+			limit=max_logos,
+			order_by="modified desc"
+		)
+		
+		# Filter only customers with images
+		client_logos = [
+			{
+				"name": customer.name,
+				"customer_name": customer.customer_name,
+				"logo": customer.image
+			}
+			for customer in customers if customer.image
+		]
+		
+		return {
+			"success": True,
+			"data": client_logos[:max_logos]
+		}
+		
+	except Exception as e:
+		frappe.log_error(f"Error fetching client logos: {str(e)}")
+		return {
+			"success": False,
+			"message": _("Error fetching client logos")
 		}
 
