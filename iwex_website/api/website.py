@@ -241,12 +241,28 @@ def get_testimonials():
 			"message": _("Error fetching testimonials")
 		}
 
-@frappe.whitelist(allow_guest=True)
-def submit_contact_form(full_name, email, phone=None, subject=None, message=None):
+@frappe.whitelist(allow_guest=True, methods=['POST'])
+def submit_contact_form():
 	"""
 	Submit contact form and create a Lead in ERPNext
 	"""
 	try:
+		# Get form data from request
+		if frappe.request.method == "POST":
+			data = json.loads(frappe.request.data)
+			full_name = data.get('full_name')
+			email = data.get('email')
+			phone = data.get('phone')
+			subject = data.get('subject')
+			message = data.get('message')
+		else:
+			# Fallback to form parameters
+			full_name = frappe.form_dict.get('full_name')
+			email = frappe.form_dict.get('email')
+			phone = frappe.form_dict.get('phone')
+			subject = frappe.form_dict.get('subject')
+			message = frappe.form_dict.get('message')
+		
 		# Validate required fields
 		if not full_name or not email:
 			return {
