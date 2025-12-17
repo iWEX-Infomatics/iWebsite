@@ -118,6 +118,7 @@ async function loadWebsiteSettings() {
         
         if (result.message && result.message.success) {
             const data = result.message.data;
+            updateBranding(data.branding);
             updateHeroSection(data.hero);
             updateAboutSection(data.about);
             updateContactSection(data.contact);
@@ -126,6 +127,49 @@ async function loadWebsiteSettings() {
         }
     } catch (error) {
         console.error('Error loading website settings:', error);
+    }
+}
+
+// Update Branding (Logo, Favicon, Company Name)
+function updateBranding(branding) {
+    // Update favicon
+    if (branding.favicon) {
+        const favicon = document.querySelector('link[rel="icon"]');
+        if (favicon) {
+            favicon.href = branding.favicon;
+        } else {
+            const newFavicon = document.createElement('link');
+            newFavicon.rel = 'icon';
+            newFavicon.type = 'image/x-icon';
+            newFavicon.href = branding.favicon;
+            document.head.appendChild(newFavicon);
+        }
+    }
+    
+    // Update company logo in navbar
+    const navbarLogo = document.querySelector('nav a[href="/"]');
+    if (navbarLogo && branding.logo) {
+        navbarLogo.innerHTML = `<img src="${branding.logo}" alt="${branding.company_name}" class="h-10 w-auto">`;
+    } else if (navbarLogo && branding.company_name) {
+        // If no logo, update text
+        navbarLogo.innerHTML = `<span class="text-blue-600">i</span><span class="text-gray-800">WEX</span>`;
+        if (branding.tagline) {
+            navbarLogo.innerHTML += `<span class="text-xs text-gray-500 ml-2">${branding.tagline}</span>`;
+        }
+    }
+    
+    // Update footer logo
+    const footerLogo = document.querySelector('footer h3');
+    if (footerLogo && branding.logo_dark) {
+        footerLogo.innerHTML = `<img src="${branding.logo_dark}" alt="${branding.company_name}" class="h-8 w-auto">`;
+    }
+    
+    // Update page title
+    if (branding.company_name) {
+        const titleParts = document.title.split(' - ');
+        if (titleParts.length > 1) {
+            document.title = `${titleParts[0]} - ${branding.company_name}`;
+        }
     }
 }
 

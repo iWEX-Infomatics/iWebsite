@@ -6,6 +6,13 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "branding_section",
+  "company_logo",
+  "company_logo_dark",
+  "favicon",
+  "column_break_branding",
+  "company_name",
+  "tagline",
   "hero_section",
   "hero_title",
   "hero_subtitle",
@@ -46,6 +53,45 @@
   "google_analytics_id"
  ],
  "fields": [
+  {
+   "fieldname": "branding_section",
+   "fieldtype": "Section Break",
+   "label": "Branding & Logo"
+  },
+  {
+   "fieldname": "company_logo",
+   "fieldtype": "Attach Image",
+   "label": "Company Logo (Light Background)",
+   "description": "Logo to display on light backgrounds (navbar, footer)"
+  },
+  {
+   "fieldname": "company_logo_dark",
+   "fieldtype": "Attach Image",
+   "label": "Company Logo (Dark Background)",
+   "description": "Logo to display on dark backgrounds (optional)"
+  },
+  {
+   "fieldname": "favicon",
+   "fieldtype": "Attach Image",
+   "label": "Favicon",
+   "description": "Small icon displayed in browser tab (recommended: 32x32px or 64x64px)"
+  },
+  {
+   "fieldname": "column_break_branding",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "label": "Company Name",
+   "default": "iWEX Infomatics"
+  },
+  {
+   "fieldname": "tagline",
+   "fieldtype": "Data",
+   "label": "Company Tagline",
+   "description": "Short tagline displayed with logo"
+  },
   {
    "fieldname": "hero_section",
    "fieldtype": "Section Break",

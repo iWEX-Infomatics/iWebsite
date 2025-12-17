@@ -17,6 +17,13 @@ def get_website_settings():
 			return {
 				"success": True,
 				"data": {
+					"branding": {
+						"company_name": settings.company_name or "iWEX Infomatics",
+						"tagline": settings.tagline or "",
+						"logo": settings.company_logo or "",
+						"logo_dark": settings.company_logo_dark or "",
+						"favicon": settings.favicon or ""
+					},
 					"hero": {
 						"title": settings.hero_title or "Welcome to iWEX Infomatics",
 						"subtitle": settings.hero_subtitle or "Innovative Web Solutions",
@@ -62,6 +69,13 @@ def get_website_settings():
 			return {
 				"success": True,
 				"data": {
+					"branding": {
+						"company_name": "iWEX Infomatics",
+						"tagline": "",
+						"logo": "",
+						"logo_dark": "",
+						"favicon": ""
+					},
 					"hero": {
 						"title": "Welcome to iWEX Infomatics",
 						"subtitle": "Transforming businesses through innovative web solutions",
